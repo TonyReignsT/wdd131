@@ -1,0 +1,59 @@
+:root {
+    --color-primary: #626F47;
+    --color-secondary: #A4B465;
+    --text-color: #18230F;
+    --color2-primary: #F5ECD5;
+    --font-style: montserrat, sans-serif; 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--);
+    color: var(--text-color);
+    font-family: var(--font-style);
+}
+
+h1 {
+    background-color: var(--color-primary);
+    color: var(--color2-primary);
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: var(--color2-primary);
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 20px;
+}
+.profile {
+    width: 200px;
+    height: auto;
+}
+.flag {
+    width: 100%;
+    height: auto;
+}
