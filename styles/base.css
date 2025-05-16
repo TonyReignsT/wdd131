@@ -45,15 +45,120 @@ nav ul li a:hover {
 }
 main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
     padding: 20px;
 }
 .profile {
     width: 200px;
     height: auto;
 }
+
+.about-me {
+    display: grid;
+    grid-template-areas: 
+        "heading heading"
+        "paragraph image";
+    grid-template-columns: 2fr 1fr; /* Paragraph takes 2/3, image takes 1/3 */
+    gap: 1rem;
+    /* margin-top: 10px; */
+    text-align: left; 
+}
+
+.about-me h2 {
+    grid-area: heading;
+    text-align: center; 
+    margin: 0;
+}
+
+.about-me img.profile {
+    grid-area: image;
+    width: 100%; 
+    height: auto;
+    padding: 10px;
+}
+
+.about-me p {
+    grid-area: paragraph;
+    margin: 0;
+}
+
+
 .flag {
     width: 100%;
     height: auto;
+    margin: 10px;
+}
+
+/* .country {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 10px;
+} */
+/* .city {
+    text-align: center;
+    margin-top: 15px auto; 
+    border-bottom: 1px solid var(--color-primary);
+    width: 60%;
+}  */
+ .country {
+    display: grid;
+    grid-template-areas: 
+        "heading heading"
+        "flag paragraph";
+    grid-template-columns: 1fr 2fr; /* Flag takes 1/3, paragraph takes 2/3 */
+    gap: 1rem;
+    margin-top: 10px;
+    text-align: left; 
+}
+
+.country h3 {
+    grid-area: heading;
+    text-align: center; 
+    margin: 15px auto;
+    border-bottom: 1px solid var(--color-primary);
+    width: 80%;
+}
+
+.country img.flag {
+    grid-area: flag;
+    width: 100%; 
+    height: auto;
+}
+
+.country p {
+    grid-area: paragraph;
+    margin: 0;
+}
+
+.card {
+    border: 1px solid;
+    border-radius: 5px;
+}
+.card h2 {
+    background-color: var(--color-primary);
+    text-align: center;
+    color: var(--color2-primary);
+}
+.card p{
+    padding: 10px;
+}
+
+.card ul {
+    list-style-type: none; 
+    padding-top: 2rem; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.card ul li {
+    margin: 0.5rem 0; /* Add spacing between list items */
+}
+
+footer p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    /* color: var(--text-color); */
 }
