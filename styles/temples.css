@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #537D5D;
+    --secondary-color: #73946B;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
