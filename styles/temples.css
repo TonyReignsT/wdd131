@@ -1,6 +1,7 @@
 :root {
     --primary-color: #537D5D;
     --secondary-color: #73946B;
+    --text-color: #CAE8BD;
 }
 
 *{
@@ -12,4 +13,141 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+}
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+ }
+ header h2 {
+    margin: 0;
+ }
+
+ header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ header nav ul li {
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: bold;
+ }
+
+/* nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+} */
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    /* border-right: 2px solid var(--text-color);
+    padding: 5px; */
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem; */
+}
+main h1 {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.temple-album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+    z-index: 1100;
+    position: relative;
+}
+
+#menu-toggle .icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+    header {
+        max-width: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding-top: 2rem;
+        /* margin-top: 4rem; */
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .nav-menu ul li a {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    footer {
+        
+    }
 }

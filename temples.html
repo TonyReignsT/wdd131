@@ -17,7 +17,8 @@
 <body>
     <header>
         <h2>Temple Album</h2>
-        <nav>
+        <button id="menu-toggle" aria-label="Toggle Menu"><span class="icon">&#9776;</span></button>
+        <nav class="nav-menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
@@ -28,7 +29,8 @@
         </nav>
     </header>
     <main>
-        <h1></h1>
+        <h1>Home</h1>
+        <div class="temple-album">
         <figure>
             <img src="./images/utah temple.jpeg" alt="temple1" class="temple">
             <figcaption>San Diego California</figcaption>
@@ -65,11 +67,13 @@
             <img src="./images/utah temple.jpeg" alt="temple9" class="temple">
             <figcaption>San Diego California</figcaption>
         </figure>
+        </div>
     </main>
     <footer>
         <p>
             &copy; <span id="currentyear"></span> | Antony Ochieng | Nairobi, Kenya.
         </p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
