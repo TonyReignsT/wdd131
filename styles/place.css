@@ -105,21 +105,7 @@ footer {
 }
 
 
-/* Large Screens  */
-@media screens and (min-width: 769px) and (max-width: 1200px) {
-    .lion-img {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .data, .weather {
-        width: 20px;
-        font-size: 1.1em;
-        padding: 20px;
-    }
-    .data h2, .weather h2 {
-        font-size: 1.3em;
-    }
-}
+
 
 /* Small Screens  */
 @media screen and (max-width: 600px) {
@@ -181,5 +167,21 @@ footer {
     }
     .weather h2 {
         width: 100%;
+    }
+}
+
+/* Large Screens  */
+@media screen and (min-width: 993px) {
+    .lion-image {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .data, .weather {
+        width: 20%;
+        font-size: 1.1em;
+        padding: 20px;
+    }
+    .data h2, .weather h2 {
+        font-size: 1.3em;
     }
 }
