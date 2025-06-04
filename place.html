@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Antony Ochieng">
+    <meta name="author" content="Antony Ochieng">
+    <title>WDD 131 - Dynamic Web Fundamentals - Antony Ochieng</title>
+    <link rel="stylesheet" href="./styles/place.css">
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="./scripts/place.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1 class="heading">KENYA</h1>
+    </header>
+    <main>
+        <div class="space"></div>
+        <section class="lion-image">
+            <!-- <img src="./images/Lion.webp" alt="Lion in Kenya"> -->
+            <img 
+            src="./images/Lion.webp"
+            srcset="./images/Lion-small.webp 600w, ./images/Lion-medium.webp 1000w, ./images/Lion.webp 1500w"
+            sizes="(max-width: 600px) 100vw, (max-width: 1000px) 80vw, 60vw"
+            alt="Lion in Kenya">
+
+            <!-- <div class="data">
+                <h2>Data</h2>
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>580,367 sq Km</dd>
+                    <dt>Population:</dt>
+                    <dd>57,435,118</dd>
+                    <dt>Capital:</dt>
+                    <dd>Nairobi</dd>
+                    <dt>Languages:</dt>
+                    <dd>English, Swahili</dd>
+                    <dt>Currency:</dt>
+                    <dd>Shillings</dd>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+3</dd>
+                    <dt>Calling Code:</dt>
+                    <dd>+254</dd>
+                    <dt>Internet TLD:</dt>
+                    <dd>.ke</dd>
+                </dl>
+            </div> -->
+        
+            <div class="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 580,367 sq Km</p>
+                <p><strong>Population:</strong> 57,435,118</p>
+                <p><strong>Capital:</strong> Nairobi</p>
+                <p><strong>Languages:</strong> English, Swahili</p>
+                <p><strong>Currency:</strong> Shillings</p>
+                <p><strong>Time Zone:</strong> UTC+3</p>
+                <p><strong>Calling Code:</strong> +254</p>
+                <p><strong>Internet TLD:</strong> .ke</p>
+            </div>
+
+            <div class="weather">
+                <h2>Weather <span class="icon">🌥️</span></h2>
+                <p><strong>Temperature:</strong> 25°C</p>
+                <p><strong>Condition:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> 15 km/h</p>
+                <p><strong>Wind Chill:</strong><span id="windChill"></span></p>
+            </div>
+        </section>
+        <div class="space"></div>
+
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> | Antony Ochieng | Nairobi, Kenya.
+        </p>
+        <p id="lastModified"></p>
+    </footer> 
+</body>
+</html>
