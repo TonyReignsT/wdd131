@@ -173,7 +173,8 @@ footer {
 /* Large Screens  */
 @media screen and (min-width: 993px) {
     .lion-image {
-        max-width: 1200px;
+        /* max-width: 1200px; */
+        width: 100%;
         margin: 0 auto;
     }
     .data, .weather {
