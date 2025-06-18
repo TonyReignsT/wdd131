@@ -157,12 +157,12 @@ function createFruitCard(fruit) {
     fruitGrid.innerHTML = fruitsToShow.map(fruit => createFruitCard(fruit)).join('');
 }
 
- // Function to add item to cart (placeholder)
-//  function addToCart(fruitId) {
-//     const fruit = fruits.find(f => f.id === fruitId);
-//     alert(`Added ${fruit.name} to cart!`);
-    // Here you would typically add the item to a cart array or send to a server
-// }
+//  Function to add item to cart (placeholder)
+ function addToCart(fruitId) {
+    const fruit = fruits.find(f => f.id === fruitId);
+    alert(`Added ${fruit.name} to cart!`);
+    // Add the item to a cart array or send to a server
+}
 
 
 // Search functionality
