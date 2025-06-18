@@ -179,6 +179,31 @@ function setupSearch() {
     });
 }
 
+
+// Contact form functionality
+function setupContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+        
+        // Simple validation
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Simulate form submission
+        alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon at ${email}.`);
+        this.reset();
+    });
+}
+
  // Initialize footer dates
  function initializeDates() {
     document.getElementById('currentyear').textContent = new Date().getFullYear();
