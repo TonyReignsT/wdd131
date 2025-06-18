@@ -18,7 +18,7 @@ const fruits = [
     type: "tropical",
     // emoji: "🍌",
     imgUrl:
-      "",
+      "images/banana.jpg",
     description:
       "Perfectly ripe bananas rich in potassium and natural sugars. Great for smoothies and baking.",
   },
@@ -29,7 +29,7 @@ const fruits = [
     type: "berry",
     // emoji: "🍓",
     imgUrl:
-      "",
+      "images/strawberries.jpg",
     description:
       "Sweet, juicy strawberries bursting with flavor. Ideal for desserts, salads, or eating fresh.",
   },
@@ -40,7 +40,7 @@ const fruits = [
     type: "stone",
     // emoji: "🍏",
     imgUrl:
-      "",
+      "images/apples.jpg",
     description:
       "Crisp and tart green apples with a refreshing crunch. Perfect for pies or healthy snacking.",
   },
@@ -51,7 +51,7 @@ const fruits = [
     type: "tropical",
     // emoji: "🍍",
     imgUrl:
-      "",
+      "images/pineapple.jpg",
     description:
       "Sweet and tangy pineapple with tropical flavor. Rich in enzymes and perfect for grilling.",
   },
@@ -62,7 +62,7 @@ const fruits = [
     type: "berry",
     // emoji: "🍇",
     imgUrl:
-      "",
+      "images/grapes.jpg",
     description:
       "Sweet, seedless grapes perfect for snacking. Rich in antioxidants and natural sweetness.",
   },
@@ -73,7 +73,7 @@ const fruits = [
     type: "stone",
     // emoji: "🍑",
     imgUrl:
-      "",
+      "images/peaches.jpg",
     description:
       "Sweet, juicy peaches with a delicate flavor. Perfect for cobblers, smoothies, or fresh eating.",
   },
@@ -84,7 +84,7 @@ const fruits = [
     type: "citrus",
     // emoji: "🍋",
     imgUrl:
-      "",
+      "images/lemon.jpg",
     description:
       "Bright, zesty lemons perfect for cooking, baking, and making refreshing lemonade.",
   },
@@ -95,7 +95,7 @@ const fruits = [
     type: "tropical",
     // emoji: "🍉",
     imgUrl:
-      "",
+      "images/watermelon.jpg",
     description:
       "Refreshing and sweet watermelon perfect for summer. High water content and naturally sweet.",
   },
@@ -106,23 +106,46 @@ const fruits = [
     type: "berry",
     // emoji: "🫐",
     imgUrl:
-      "",
+      "images/blueberries.jpg",
     description:
       "Antioxidant-rich blueberries with a sweet-tart flavor. Perfect for pancakes, muffins, or snacking.",
   },
 ];
 
 // Function to create fruit cards
+// function createFruitCard(fruit) {
+//     return `
+//         <div class="fruit-card" data-id="${fruit.id}">
+//             <div class="fruit-image">${fruit.imgUrl}</div>
+//             <div class="fruit-info">
+//                 <h3 class="fruit-name">${fruit.name}</h3>
+//                 <div class="fruit-price">$${fruit.price.toFixed(2)}</div>
+//                 <div class="fruit-type">${fruit.type}</div>
+//                 <p class="fruit-description">${fruit.description}</p>
+//                 <button class="add-to-cart" onclick="addToCart(${fruit.id})">Add to Cart</button>
+//             </div>
+//         </div>
+//     `;
+// }
+
 function createFruitCard(fruit) {
-    return `
+  return `
         <div class="fruit-card" data-id="${fruit.id}">
-            <div class="fruit-image">${fruit.imgUrl}</div>
+            <div class="fruit-image">
+                ${
+                  fruit.imgUrl
+                    ? `<img src="${fruit.imgUrl}" alt="${fruit.name}" loading="lazy">`
+                    : `<div class="placeholder-image">No Image Available</div>`
+                }
+            </div>
             <div class="fruit-info">
                 <h3 class="fruit-name">${fruit.name}</h3>
                 <div class="fruit-price">$${fruit.price.toFixed(2)}</div>
                 <div class="fruit-type">${fruit.type}</div>
                 <p class="fruit-description">${fruit.description}</p>
-                <button class="add-to-cart" onclick="addToCart(${fruit.id})">Add to Cart</button>
+                <button class="add-to-cart" onclick="addToCart(${
+                  fruit.id
+                })">Add to Cart</button>
             </div>
         </div>
     `;
