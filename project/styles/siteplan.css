@@ -1,0 +1,368 @@
+/* :root {
+    --primary-color: #2A4759;
+    --secondary-color: #F79B72;
+    --background-color: #16610E;
+    --text-color:  #FED16A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', 'sans-serif';
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    list-style-type: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.hero {
+    background: linear-gradient(
+        rgba(42, 71, 89, 0.7),
+        rgba(42, 71, 89, 0.7)
+    ), url('../images/hero-fruits.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.hero h1 {
+    text-align: center;
+    position: relative;
+}
+.hero p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+    position: relative;
+
+}
+.cta {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 600px;
+    margin:20px auto;
+    top: 80px;
+}
+
+.catalog h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} */
+
+
+:root {
+    --primary-color: #2A4759;
+    --secondary-color: #F79B72;
+    --background-color: #16610E;
+    --text-color: #FED16A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--background-color);
+}
+
+.cart-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    background: linear-gradient(
+        rgba(42, 71, 89, 0.7),
+        rgba(42, 71, 89, 0.7)
+    ), url('../images/hero-fruits.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.cta {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(42, 71, 89, 0.3);
+}
+
+.cta:hover {
+    background-color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(42, 71, 89, 0.4);
+}
+
+.catalog {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-container label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#searchFilter {
+    padding: 12px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    font-size: 1rem;
+    width: 300px;
+    max-width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchFilter:focus {
+    border-color: var(--background-color);
+}
+
+.catalog h2 {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.fruit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.fruit-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.fruit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.fruit-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #ccc;
+}
+
+.fruit-info {
+    padding: 25px;
+}
+
+.fruit-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.fruit-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--background-color);
+    margin-bottom: 10px;
+}
+
+.fruit-type {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.fruit-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    .catalog h2 {
+        font-size: 2rem;
+    }
+    
+    .fruit-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    #searchFilter {
+        width: 100%;
+    }
+}
