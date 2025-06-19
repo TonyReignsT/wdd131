@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #3674B5;
+    --secondary-color: #EBFFD8; 
+    --font-family: 'montserrat', 'sans-serif';
+    --additional-color: #F2F2F2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(54, 116, 181, 0.1);
+}
+
+/* Form Elements */
+form h1 {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Range Input */
+input[type="range"] {
+    width: 100%;
+    margin: 1rem 0;
+    accent-color: var(--primary-color);
+}
+
+/* Checkbox Section */
+.checkbox-field {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.checkbox-field label {
+    display: inline;
+    margin-left: 0.5rem;
+}
+
+/* Rating Display */
+#rangeValue {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2963a3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--secondary-color);
+    margin: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}

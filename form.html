@@ -18,7 +18,8 @@
             <select name="name" id="name">
                 <option value="" disabled selected>Select a product...</option>
             </select>
-            <div>
+
+            <div id="rangeValue"></div>
             <label for="rating">Overal Rating</label>
             <input type="range" name="rating" id="rating" min="0" max="5" step="1" list="ratings" value="0" required>
             <datalist id="ratings">
@@ -28,9 +29,27 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </datalist>
+            </datalist> <br>
+             <label for="date">Date of Installation</label> <br>
+             <input type="date" name="date" id="date" required><br>
+             <label for="features">Which features did you find useful in the product? <i>(Check all that apply)</i></label>
+             <div class="checkbox-field">
+                <input type="checkbox" name="feature1" id="feature1" value="durability">
+                <label for="feature1">Durability</label><br>
+                <input type="checkbox" name="feature2" id="feature2" value="ease-of-use">
+                <label for="feature2">Ease of Use</label><br>
+                <input type="checkbox" name="feature3" id="feature3" value="performance">
+                <label for="feature3">Performance</label><br>
+                <input type="checkbox" name="feature4" id="feature4" value="design">
+                <label for="feature4">Design</label>
+             </div>
+             <label for="review">Written Review <span>(optional)</span></label><br>
+             <textarea name="review" id="review" rows="10" cols="50"></textarea><br>
 
-            </div>
+             <label for="userName"> Your Name <span>(Optional)</span></label><br>
+             <input type="text" name="userName" id="userName"> <br>
+
+             <button type="submit">Post Review</button>
         </form>
     </main>
     <footer>

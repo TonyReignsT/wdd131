@@ -1,3 +1,12 @@
+// Handles date and time modified
+const yearElement = document.getElementById("currentyear");
+const lastModifiedElement = document.getElementById("lastModified");
+
+const currentYear = new Date().getFullYear();
+yearElement.innerHTML = `<span class="highlight">${currentYear}</span>`;
+
+lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+
 const products = [
   {
     id: "fc-1888",
@@ -25,3 +34,15 @@ const products = [
     averagerating: 5.0,
   },
 ];
+
+//Get the select elements
+const productSelect = document.getElementById("name");
+console.log(productSelect);
+
+//Add options dynamically
+products.forEach((product) => {
+  const option = document.createElement("option");
+  option.value = product.name.toLowerCase().replace(" ", "-"); // Convert name to lowercase and replace spaces with hyphens
+  option.textContent = product.name;
+  productSelect.appendChild(option);
+});
