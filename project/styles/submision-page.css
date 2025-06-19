@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #2A4759;
+    --secondary-color: #F79B72;
+    --background-color: #16610E;
+    --text-color: #FED16A;
+    --font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    max-width: 450px;
+    margin: 8vh auto 0 auto;
+    background: var(--primary-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(42, 71, 89, 0.15);
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+#reviewCounter {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 1rem;
+}
+
+a:hover {
+    background: var(--text-color);
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 1.2rem 0.5rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
