@@ -5,6 +5,10 @@
     --text-color: #FED16A;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
